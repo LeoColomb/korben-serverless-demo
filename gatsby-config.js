@@ -4,7 +4,6 @@ module.exports = {
     title: "Korben.info Serverless Demo",
   },
   plugins: [
-    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -13,5 +12,14 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: "./src/posts/",
+      },
+      __key: "posts",
+    },
+    "gatsby-transformer-remark",
   ],
 };
