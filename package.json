@@ -4,6 +4,7 @@
   "private": true,
   "description": "Korben.info Serverless Demo",
   "author": "Léo Colombaro",
+  "main": "functions/timedate.js",
   "keywords": [
     "gatsby"
   ],
