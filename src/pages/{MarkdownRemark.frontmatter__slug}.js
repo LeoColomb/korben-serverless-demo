@@ -29,8 +29,13 @@ export default function Template({
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        <p id="worker-content">Ce contenu a été compilé le{' '}
+        <p>Ce contenu a été compilé le{' '}
           <time style={timeStyles}>{datetime}</time>
+          .
+        </p>
+        <p>Ce contenu a été ajouté dynamiquement le{' '}
+          <time id="worker-time" style={timeStyles}>N/A</time>{' '}
+          par la fonction cloud.
         </p>
       </div>
     </div>
