@@ -7,20 +7,31 @@ const pageStyles = {
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 
+const timeStyles = {
+  color: "#8A6534",
+  padding: 4,
+  backgroundColor: "#FFF4DB",
+  fontSize: "1.25rem",
+  borderRadius: "4px"
+}
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+  const datetime = new Date().toUTCString()
   return (
     <div style={pageStyles}>
       <div className="blog-post">
         <h1>{frontmatter.title}</h1>
-        <code>{frontmatter.date}</code>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+        <p id="worker-content">Ce contenu a été compilé le{' '}
+          <time style={timeStyles}>{datetime}</time>
+        </p>
       </div>
     </div>
   )
