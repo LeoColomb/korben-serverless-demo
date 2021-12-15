@@ -15,20 +15,18 @@ const timeStyles = {
   borderRadius: "4px"
 }
 
+const datetime = new Date().toUTCString()
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
-  const datetime = new Date().toUTCString()
   return (
     <div style={pageStyles}>
-      <div className="blog-post">
+      <div>
         <h1>{frontmatter.title}</h1>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: html }}/>
         <p>Ce contenu a été compilé le{' '}
           <time style={timeStyles}>{datetime}</time>
           .

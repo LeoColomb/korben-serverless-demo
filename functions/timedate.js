@@ -12,7 +12,7 @@ addEventListener("fetch", (event) => {
  * @returns {Promise<Response>}
  */
 async function handleRequest(request) {
-  const res = await fetch(`https://serverless-korben-lesjeudis.pages.dev/`)
+  const res = await fetch("https://serverless-demo-38a.pages.dev/my-first-post/")
   const contentType = res.headers.get("Content-Type")
   
   // If the response is HTML, it can be transformed with

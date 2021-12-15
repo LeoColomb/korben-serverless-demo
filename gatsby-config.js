@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://serverless-demo.korben.workers.dev",
     title: "Korben.info Serverless Demo",
   },
   plugins: [
