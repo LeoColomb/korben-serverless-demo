@@ -19,7 +19,7 @@ async function handleRequest(request) {
   // HTMLRewriter -- otherwise, it should pass through
   if (contentType.startsWith("text/html")) {
     return new HTMLRewriter()
-      .on("time#worker-content", new TimeRewriter())
+      .on("time#worker-time", new TimeRewriter())
       .transform(res)
   } else {
     return res

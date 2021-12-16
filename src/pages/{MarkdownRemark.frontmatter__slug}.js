@@ -28,7 +28,7 @@ export default function Template({
         <h1>{frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }}/>
         <p>Ce contenu a été compilé le{' '}
-          <time style={timeStyles}>{datetime}</time>
+          <time style={timeStyles}>{new Date().toUTCString()}</time>
           .
         </p>
         <p>Ce contenu a été ajouté dynamiquement le{' '}
